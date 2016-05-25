@@ -48,7 +48,7 @@ class Sender(Protocol):
 
 
 PORT = 9001
-HOST = '123.59.110.191'
+HOST = '123.57.18.96'
 
 
 def sendCommand(command):

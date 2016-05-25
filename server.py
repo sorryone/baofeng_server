@@ -7,6 +7,9 @@ from twisted.application import internet, service
 # from twisted.internet import reactor
 import pickle
 import uuid
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8") 
 
 
 def get_msg_data(buf):
@@ -36,13 +39,13 @@ def set_msg_data(data, format_code, data_body=None):
 class Game(LineOnlyReceiver):
 
     def dataReceived(self, buf):
-        print "===============> datarecevied, buf=", buf
+        print "===============> datarecevied, buf=", len(buf)
         if buf and len(buf) > 12:
             data_head, data_body = get_msg_data(buf)
             self.factory.sendAll(data_head, data_body)
 
     def lineReceived(self, buf):
-        print "===============> recdata =", buf
+        print "===============> recdata =", len(buf)
         if buf and len(buf) > 12:
             data_head, data_body = get_msg_data(buf)
             self.factory.sendAll(data_head, data_body)
