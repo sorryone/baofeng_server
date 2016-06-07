@@ -8,7 +8,7 @@ import pickle
 
 def get_msg_data(buf):
     buf_data = buffer(buf)
-    data = pickle.struct.unpack("1i", buf_data[:4])
+    data = pickle.struct.unpack("2i", buf_data[:8])
     print "unpack data = ", data
     return data
 
@@ -29,17 +29,17 @@ class Sender(Protocol):
                 "msg": "new player login game"
             }
             data = (len(game_data["msg"]), random.randint(0, 10),
-                    10001, game_data["msg"])
+                    20001, game_data["msg"])
             buf = set_msg_data(data, "3i%ss" % len(game_data["msg"]))
             self.transport.write(buf)
         elif command == "run":
             data = (20, random.randint(0, 10),
-                    10003, random.randint(0, 100), random.randint(0, 100),
+                    20005, random.randint(0, 100), random.randint(0, 100),
                     random.randint(0, 100))
             buf = set_msg_data(data, "3i3f")
             self.transport.write(buf)
         elif command == "stop":
-            data = (12, random.randint(0, 10), 10003)
+            data = (12, random.randint(0, 10), 20003)
             buf = set_msg_data(data, "3i")
             self.transport.write(buf)
 
