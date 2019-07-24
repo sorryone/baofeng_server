@@ -10,25 +10,36 @@ import uuid
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
+DEBUG = True
 
 
-def get_msg_data(buf):
+# 解析消息头
+def parse_package(buf):
+    if(!buf or len(buf) < 12):
+        if(DEBUG):
+            print("消息内容小于标准 抛弃消息")
+        return
+
     data_buf = buffer(buf)
-    data_head = pickle.struct.unpack("3i", data_buf[:12])
-    data_body = buf[12:]
-    # print "unpack data = ", data_head
+    data_head = pickle.struct.unpack("4i", data_buf[:16])
+    data_body = buf[16:]
+    if(DEBUG):
+        print("消息头内容为 = ", data_head)
     return data_head, data_body
 
 
+# 组装消息
 def set_msg_data(data, format_code, data_body=None):
     if not data:
         return data_body
     if not isinstance(data, (tuple, list)):
         raise TypeError
     buf = pickle.struct.pack(format_code, *data)
-    # print "format_code=", format_code
-    # print "pack buf = ", len(buf)
-    # print "data=", data
+    if(DEBUG):
+        print("组装消息格式为= ", format_code)
+        print("组装消息头的长度为= ", len(buf))
+        print("组装后消息为= ", data)
+
     buf_data = None
     if data_body:
         buf_data = buf + data_body
@@ -38,8 +49,13 @@ def set_msg_data(data, format_code, data_body=None):
     return buf_data
 
 
+#获取标准消息结构 长度int 消息号int 用户id int 房间id int
+def get_head_data(client):
+
+
+
 def client_connect(client):
-    print "New User Login:", client.getId()
+    print("New User Login:", client.getId())
     p_id = uuid.uuid1().get_hex()[:20]
     u_id = int(p_id[4:8], 16)
     msg_data = (8, 10002, u_id)
@@ -55,7 +71,7 @@ def client_connect(client):
 
 
 def client_login_game(client):
-    print "New Player Login Game"
+    print("New Player Login Game")
     u_id = client.factory.get_uid_by_lobby(client)
     if client.factory.master_uid:
         msg_data = (8, 20002, client.factory.master_uid)
@@ -75,7 +91,7 @@ def client_login_game(client):
 
 
 def client_logout_game(client):
-    print "Player Logout Game"
+    print("Player Logout Game")
     u_id = client.factory.get_uid_by_lobby(client)
     msg_data = (8, 20006, u_id)
     buf = set_msg_data(msg_data, "3i")
@@ -93,13 +109,11 @@ def client_logout_game(client):
 class Game(LineOnlyReceiver):
 
     def dataReceived(self, buf):
-        # print "===============> datarecevied, buf=", len(buf)
-        if buf and len(buf) > 12:
-            data_head, data_body = get_msg_data(buf)
-            self.factory.sendAll(data_head, data_body, self)
+        data_head, data_body = get_msg_data(buf)
+
 
     def lineReceived(self, buf):
-        if buf and len(buf) > 12:
+        if buf and len(buf) > 16:
             data_head, data_body = get_msg_data(buf)
             self.factory.sendAll(data_head, data_body)
 
@@ -158,8 +172,8 @@ class GameFactory(ServerFactory):
         # msg_num = data_head[1]
         msg_code = data_head[2]
         if msg_code == 20001:
-            print "clinets num = ", len(self.clients)
-            print "recv=20001"
+            print("clinets num = ", len(self.clients))
+            print("recv=20001")
             client_login_game(client)
         else:
             # print "msg_len=", msg_len, "client_id=", client.getId()
@@ -175,10 +189,10 @@ class GameFactory(ServerFactory):
 # reactor.run()
 
 # configuration parameters
-# iface = 'localhost'
+iface = 'localhost'
 # iface = "0.0.0.0"
 # iface = "10.136.13.219"
-iface = "::"
+# iface = "::"
 # iface = "123.118.195.147"
 port = 9001
 
@@ -186,6 +200,5 @@ top_service = service.MultiService()
 factory = GameFactory(top_service)
 tcp_service = internet.TCPServer(port, factory, interface=iface)
 tcp_service.setServiceParent(top_service)
-
 application = service.Application("GameServer")
-top_service.setServiceParent(application)
+top_service.setServicePry = GameFactory(top_service)
