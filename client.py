@@ -15,7 +15,7 @@ class Sender(Protocol):
         self.factory.sender_finished(data)
 
 
-PORT = 9001
+PORT = 1234
 HOST = 'localhost'
 
 class PoetryClientFactory(ClientFactory):

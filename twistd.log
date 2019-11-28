@@ -10525,3 +10525,44 @@
 2019-06-20T19:13:15+0000 [stdout#info] ('u_id ========', 49358)
 2019-06-20T19:13:24+0000 [stdout#info] 用户退出游戏
 2019-06-20T19:13:24+0000 [stdout#info] ('RoomList = ', {})
+2019-07-31T16:06:09+0800 [-] Loading finger11.py...
+2019-07-31T16:06:09+0800 [-] Loaded.
+2019-07-31T16:06:09+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-07-31T16:06:09+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-07-31T16:06:09+0800 [-] FingerFactory starting on 79
+2019-07-31T16:06:09+0800 [builtins.FingerFactory#info] Starting factory <FingerFactory object at 0x7ff1502554e0>
+2019-07-31T16:06:09+0800 [-] set uid/gid 1/1
+2019-07-31T16:07:48+0800 [-] Removing stale pidfile /data/socket_server/twistd.pid
+2019-07-31T16:07:48+0800 [-] Loading finger11.py...
+2019-07-31T16:07:48+0800 [-] Loaded.
+2019-07-31T16:07:48+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-07-31T16:07:48+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-07-31T16:07:48+0800 [-] FingerFactory starting on 79
+2019-07-31T16:07:48+0800 [builtins.FingerFactory#info] Starting factory <FingerFactory object at 0x7fd28cbe2518>
+2019-07-31T16:07:48+0800 [-] set uid/gid 1/1
+2019-07-31T16:12:14+0800 [-] Loading finger11.py...
+2019-07-31T16:12:14+0800 [-] Loaded.
+2019-07-31T16:12:14+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-07-31T16:12:14+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-07-31T16:12:14+0800 [-] FingerFactory starting on 79
+2019-07-31T16:12:14+0800 [builtins.FingerFactory#info] Starting factory <FingerFactory object at 0x7f0334fe44e0>
+2019-07-31T16:12:14+0800 [-] set uid/gid 1/1
+2019-07-31T16:19:29+0800 [-] Removing stale pidfile /data/socket_server/finger11.pid
+2019-07-31T16:19:29+0800 [-] Loading finger11.py...
+2019-07-31T16:19:29+0800 [-] Loaded.
+2019-07-31T16:19:29+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-07-31T16:19:29+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-07-31T16:19:29+0800 [-] FingerFactory starting on 79
+2019-07-31T16:19:29+0800 [builtins.FingerFactory#info] Starting factory <FingerFactory object at 0x7f778aac7588>
+2019-07-31T16:19:29+0800 [twisted.logger._global#warn] /usr/local/lib/python3.5/dist-packages/twisted/python/util.py:723: builtins.UserWarning: tried to drop privileges and setuid 0 but uid is already 0; should we be root? Continuing.
+2019-07-31T16:19:29+0800 [-] set uid/gid 0/1
+2019-07-31T16:38:45+0800 [-] Loading ProxyServer.py...
+2019-07-31T16:38:45+0800 [-] Loaded.
+2019-07-31T16:38:45+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-07-31T16:38:45+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-07-31T16:38:45+0800 [-] GameFactory starting on 1234
+2019-07-31T16:38:45+0800 [builtins.GameFactory#info] Starting factory <GameFactory object at 0x7f2c38c61be0>
+2019-07-31T16:38:45+0800 [twisted.logger._global#warn] /usr/local/lib/python3.5/dist-packages/twisted/python/util.py:723: builtins.UserWarning: tried to drop privileges and setuid 0 but uid is already 0; should we be root? Continuing.
+2019-07-31T16:38:45+0800 [-] set uid/gid 0/0
+2019-07-31T16:38:56+0800 [stdout#info] 2
+2019-07-31T16:38:57+0800 [stdout#info] 5
