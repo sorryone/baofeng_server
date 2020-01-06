@@ -1831,3 +1831,158 @@
 2019-11-28T11:52:59+0800 [stdout#info] code = 1015 user_id =  116  client =  <Game object at 0x7f78acaf47b8>
 2019-11-28T11:52:59+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f78d4e02780>  ip= 101.206.167.12
 2019-11-28T11:52:59+0800 [stdout#info] ===========user login out!!! users =  dict_keys([30, 33, 34, 36, 37, 38, 40, 42, 43, 44, 45, 47, 48, 49, 50, 52, 341, 91, 237, 116])
+2019-11-28T14:38:46+0800 [-] Removing stale pidfile /data/socket_server/proxy_server.pid
+2019-11-28T14:38:46+0800 [-] Loading ProxyServer.py...
+2019-11-28T14:38:46+0800 [-] Loaded.
+2019-11-28T14:38:46+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2019-11-28T14:38:46+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2019-11-28T14:38:46+0800 [-] GameFactory starting on 9527
+2019-11-28T14:38:46+0800 [builtins.GameFactory#info] Starting factory <GameFactory object at 0x7f4b897a8c88>
+2020-01-06T10:16:59+0800 [-] Removing stale pidfile /data/socket_server/proxy_server.pid
+2020-01-06T10:16:59+0800 [-] Loading ProxyServer.py...
+2020-01-06T10:16:59+0800 [-] Loaded.
+2020-01-06T10:16:59+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2020-01-06T10:16:59+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-01-06T10:16:59+0800 [stderr#error] Traceback (most recent call last):
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 1361, in startListening
+2020-01-06T10:16:59+0800 [stderr#error]     skt.bind(addr)
+2020-01-06T10:16:59+0800 [stderr#error] OSError: [Errno 98] Address already in use
+2020-01-06T10:16:59+0800 [stderr#error] During handling of the above exception, another exception occurred:
+2020-01-06T10:16:59+0800 [stderr#error] Traceback (most recent call last):
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/bin/twistd", line 9, in <module>
+2020-01-06T10:16:59+0800 [stderr#error]     load_entry_point('Twisted==19.2.1', 'console_scripts', 'twistd')()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/twistd.py", line 31, in run
+2020-01-06T10:16:59+0800 [stderr#error]     app.run(runApp, ServerOptions)
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/app.py", line 674, in run
+2020-01-06T10:16:59+0800 [stderr#error]     runApp(config)
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/twistd.py", line 25, in runApp
+2020-01-06T10:16:59+0800 [stderr#error]     runner.run()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/app.py", line 385, in run
+2020-01-06T10:16:59+0800 [stderr#error]     self.postApplication()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/_twistd_unix.py", line 254, in postApplication
+2020-01-06T10:16:59+0800 [stderr#error]     self.startApplication(self.application)
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/_twistd_unix.py", line 442, in startApplication
+2020-01-06T10:16:59+0800 [stderr#error]     service.IService(application).privilegedStartService()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/service.py", line 283, in privilegedStartService
+2020-01-06T10:16:59+0800 [stderr#error]     service.privilegedStartService()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/internet.py", line 369, in privilegedStartService
+2020-01-06T10:16:59+0800 [stderr#error]     raisedNow[0].raiseException()
+2020-01-06T10:16:59+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 488, in raiseException
+2020-01-06T10:16:59+0800 [stderr#error]     raise self.value.with_traceback(self.tb)
+2020-01-06T10:16:59+0800 [stderr#error] twisted.internet.error.CannotListenError: Couldn't listen on any:9527: [Errno 98] Address already in use.
+2020-01-06T10:17:21+0800 [-] Loading ProxyServer.py...
+2020-01-06T10:17:21+0800 [-] Loaded.
+2020-01-06T10:17:21+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2020-01-06T10:17:21+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-01-06T10:17:21+0800 [stderr#error] Traceback (most recent call last):
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/internet/tcp.py", line 1361, in startListening
+2020-01-06T10:17:21+0800 [stderr#error]     skt.bind(addr)
+2020-01-06T10:17:21+0800 [stderr#error] OSError: [Errno 98] Address already in use
+2020-01-06T10:17:21+0800 [stderr#error] During handling of the above exception, another exception occurred:
+2020-01-06T10:17:21+0800 [stderr#error] Traceback (most recent call last):
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/bin/twistd", line 9, in <module>
+2020-01-06T10:17:21+0800 [stderr#error]     load_entry_point('Twisted==19.2.1', 'console_scripts', 'twistd')()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/twistd.py", line 31, in run
+2020-01-06T10:17:21+0800 [stderr#error]     app.run(runApp, ServerOptions)
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/app.py", line 674, in run
+2020-01-06T10:17:21+0800 [stderr#error]     runApp(config)
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/twistd.py", line 25, in runApp
+2020-01-06T10:17:21+0800 [stderr#error]     runner.run()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/app.py", line 385, in run
+2020-01-06T10:17:21+0800 [stderr#error]     self.postApplication()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/_twistd_unix.py", line 254, in postApplication
+2020-01-06T10:17:21+0800 [stderr#error]     self.startApplication(self.application)
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/scripts/_twistd_unix.py", line 442, in startApplication
+2020-01-06T10:17:21+0800 [stderr#error]     service.IService(application).privilegedStartService()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/service.py", line 283, in privilegedStartService
+2020-01-06T10:17:21+0800 [stderr#error]     service.privilegedStartService()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/application/internet.py", line 369, in privilegedStartService
+2020-01-06T10:17:21+0800 [stderr#error]     raisedNow[0].raiseException()
+2020-01-06T10:17:21+0800 [stderr#error]   File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 488, in raiseException
+2020-01-06T10:17:21+0800 [stderr#error]     raise self.value.with_traceback(self.tb)
+2020-01-06T10:17:21+0800 [stderr#error] twisted.internet.error.CannotListenError: Couldn't listen on any:9527: [Errno 98] Address already in use.
+2020-01-06T10:18:40+0800 [-] Loading ProxyServer.py...
+2020-01-06T10:18:40+0800 [-] Loaded.
+2020-01-06T10:18:40+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2020-01-06T10:18:40+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-01-06T10:18:40+0800 [-] GameFactory starting on 9527
+2020-01-06T10:18:40+0800 [builtins.GameFactory#info] Starting factory <GameFactory object at 0x7f4dc5aef470>
+2020-01-06T10:23:15+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:23:15+0800 [stdout#info] =============> {'user_type': 0, 'school_id': 4, 'user_name_len': 20, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}
+2020-01-06T10:23:15+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:23:15+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:23:15+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:23:15+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc5ae5cf8>
+2020-01-06T10:24:41+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f4dc5ae5cf8>  ip= 103.219.186.134
+2020-01-06T10:24:41+0800 [stdout#info] ===========user login out!!! users =  dict_keys([])
+2020-01-06T10:24:50+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:24:50+0800 [stdout#info] =============> {'user_type': 0, 'school_id': 4, 'user_name_len': 20, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}
+2020-01-06T10:24:50+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:24:50+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:24:50+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:24:50+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc4b8ebe0>
+2020-01-06T10:26:29+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f4dc4b8ebe0>  ip= 103.219.186.134
+2020-01-06T10:26:29+0800 [stdout#info] ===========user login out!!! users =  dict_keys([])
+2020-01-06T10:26:45+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:26:45+0800 [stdout#info] =============> {'user_type': 3, 'school_id': 4, 'user_name_len': 20, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}
+2020-01-06T10:26:45+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:26:45+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:26:45+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:26:45+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc4b8ec18>
+2020-01-06T10:26:54+0800 [stdout#info] ========rooms =  dict_keys([1])
+2020-01-06T10:26:54+0800 [stdout#info] code_attr =  ['owner_id', 'owner_name_len', 'owner_name', 'course_name_len', 'course_name', 'subject_id', 'course_id', 'room_id', 'onlineCt', 'is_public'] code =  1011
+2020-01-06T10:27:10+0800 [stdout#info] ================> {'is_enter': False, 'room_id': 1}
+2020-01-06T10:27:10+0800 [stdout#info] ========= Close room =  dict_keys([])
+2020-01-06T10:27:10+0800 [stdout#info] code_attr =  ['room_id'] code =  1015
+2020-01-06T10:27:10+0800 [stdout#info] logout =  dict_keys([14])  isremove= False
+2020-01-06T10:27:10+0800 [stdout#info] code = 1015 user_id =  14  client =  <Game object at 0x7f4dc4b8ec18>
+2020-01-06T10:27:10+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:27:10+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc4b8ec18>
+2020-01-06T10:27:27+0800 [stdout#info] ========rooms =  dict_keys([2])
+2020-01-06T10:27:27+0800 [stdout#info] code_attr =  ['owner_id', 'owner_name_len', 'owner_name', 'course_name_len', 'course_name', 'subject_id', 'course_id', 'room_id', 'onlineCt', 'is_public'] code =  1011
+2020-01-06T10:27:41+0800 [stdout#info] ================> {'is_enter': False, 'room_id': 2}
+2020-01-06T10:27:41+0800 [stdout#info] ========= Close room =  dict_keys([])
+2020-01-06T10:27:41+0800 [stdout#info] code_attr =  ['room_id'] code =  1015
+2020-01-06T10:27:41+0800 [stdout#info] logout =  dict_keys([14])  isremove= False
+2020-01-06T10:27:41+0800 [stdout#info] code = 1015 user_id =  14  client =  <Game object at 0x7f4dc4b8ec18>
+2020-01-06T10:27:41+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:27:41+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc4b8ec18>
+2020-01-06T10:27:43+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f4dc4b8ec18>  ip= 103.219.186.134
+2020-01-06T10:27:43+0800 [stdout#info] ===========user login out!!! users =  dict_keys([])
+2020-01-06T10:27:51+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:27:51+0800 [stdout#info] =============> {'user_type': 0, 'school_id': 4, 'user_name_len': 20, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}
+2020-01-06T10:27:51+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:27:51+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:27:51+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:27:51+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4dc4b8ecc0>
+2020-01-06T10:28:06+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f4dc4b8ecc0>  ip= 103.219.186.134
+2020-01-06T10:28:06+0800 [stdout#info] ===========user login out!!! users =  dict_keys([])
+2020-01-06T10:29:11+0800 [-] Removing stale pidfile /data/socket_server/proxy_server.pid
+2020-01-06T10:29:11+0800 [-] Loading ProxyServer.py...
+2020-01-06T10:29:11+0800 [-] Loaded.
+2020-01-06T10:29:11+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2020-01-06T10:29:11+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-01-06T10:29:11+0800 [-] GameFactory starting on 9527
+2020-01-06T10:29:11+0800 [builtins.GameFactory#info] Starting factory <GameFactory object at 0x7fd99607a8d0>
+2020-01-06T10:29:25+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:29:25+0800 [stdout#info] =============> {'user_type': 0, 'school_id': 4, 'user_name_len': 20, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'}
+2020-01-06T10:29:25+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:29:25+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:29:25+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:29:25+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7fd996090ef0>
+2020-01-06T10:29:32+0800 [stdout#info] type= 0 is_p= True
+2020-01-06T10:30:38+0800 [-] Removing stale pidfile /data/socket_server/proxy_server.pid
+2020-01-06T10:30:38+0800 [-] Loading ProxyServer.py...
+2020-01-06T10:30:38+0800 [-] Loaded.
+2020-01-06T10:30:38+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 19.2.1 (/usr/bin/python3 3.5.2) starting up.
+2020-01-06T10:30:38+0800 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-01-06T10:30:38+0800 [-] GameFactory starting on 9527
+2020-01-06T10:30:38+0800 [builtins.GameFactory#info] Starting factory <GameFactory object at 0x7f4d1c4dc2e8>
+2020-01-06T10:30:39+0800 [stdout#info] =============== connect client ip =  103.219.186.134
+2020-01-06T10:30:39+0800 [stdout#info] =============> {'user_name_len': 20, 'school_id': 4, 'user_name': b'yctest050\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'user_type': 0}
+2020-01-06T10:30:39+0800 [stdout#info] code_attr =  ['room_id'] code =  1002
+2020-01-06T10:30:39+0800 [stdout#info] login === users =  dict_keys([14]) user_id= 14
+2020-01-06T10:30:39+0800 [stdout#info] sub_lens =    lens= 0
+2020-01-06T10:30:39+0800 [stdout#info] code = 1004 user_id =  14  client =  <Game object at 0x7f4d1c4d37b8>
+2020-01-06T10:30:44+0800 [stdout#info] ===========user login out!!! client =  <Game object at 0x7f4d1c4d37b8>  ip= 103.219.186.134
+2020-01-06T10:30:44+0800 [stdout#info] ===========user login out!!! users =  dict_keys([])
