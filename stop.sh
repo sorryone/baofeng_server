@@ -1,2 +1,2 @@
 #!/bin/sh
-kill -9 `cat /data/socket_server/proxy_server.pid`
+kill -9 `cat /data/baofeng_server/proxy_server.pid`
