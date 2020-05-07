@@ -5,7 +5,7 @@ from twisted.internet import reactor
 import struct
 # import uuid
 # import sys
-# import time
+import time
 import gevent
 # import importlib
 # MAX_BUF_COUNT = 80
@@ -118,6 +118,16 @@ Msg_Data = {
         # 语音
         "format_code": "",
         "attr": [],
+    },
+    3001: {
+        "format_code": "",
+        "attr": [],
+    },
+    3002: {
+        # 返回房间信息
+        "format_code": "fi4h?",
+        "attr": ["create_at", "owner_id", "subject_id",
+                 "course_id", "room_id", "onlineCt", "is_public"]
     },
 }
 
@@ -284,6 +294,7 @@ def processingLogic(client, factory, data_head, data_buf):
         factory.rooms[room_id] = data_body
         factory.rooms[room_id]["users"] = {}
         factory.rooms[room_id]["users"][user_id] = factory.users[user_id]
+        factory.rooms[room_id]["create_at"] = time.time()
         print("========rooms = ", factory.rooms.keys())
 
         data_body["room_id"] = room_id
@@ -433,6 +444,15 @@ def processingLogic(client, factory, data_head, data_buf):
 
         user["client"].transport.write(data_buf)
 
+    elif msg_code == 3001:
+        # 管理员查看房间信息
+        params = []
+        for k, v in factory.rooms.items():
+            params.append(v)
+
+        data = pack_msg_list(1004, 3002, dict_d=params)
+        print("code = 3002")
+        client.transport.write(data)
     # print("send Finish, factory.bufList = ", len(factory.bufList))
 
 
