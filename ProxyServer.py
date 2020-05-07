@@ -275,13 +275,17 @@ def processingLogic(client, factory, data_head, data_buf):
         if user_id not in factory.users:
             return
         user_type = factory.users[user_id]["user_type"]
-        # 如果创建房间的不是老师 不是管理员
-        if user_type not in (0, 3):
-            return
         # 客户端发送创建房间请求
         data_body = unpack_body(msg_len, msg_code, data_buf)
         # print("=============>", data_body)
 
+        # 普通老师只能建普通课房间 管理员可以创建全国公开课房间
+        if data_body["is_public"]:
+            if user_type != 3:
+                return
+        else:
+            if user_type != 0:
+                return
         is_has = {k for k, v in factory.rooms.items()
                   if data_body["owner_id"] in v}
 
